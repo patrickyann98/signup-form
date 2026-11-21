@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <main class="signup-page">
+      <section class="signup-card" aria-labelledby="signup-title">
+        <h1 id="signup-title">Create your account</h1>
+        <p>Enter your details to get started.</p>
+
+        <form id="signup-form" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="first-name">First name</label>
+              <input
+                id="first-name"
+                name="firstName"
+                type="text"
+                autocomplete="given-name"
+                required
+                minlength="2"
+                pattern="[^0-9]*"
+                aria-describedby="first-name-error"
+              />
+              <span class="field-error" id="first-name-error"></span>
+            </div>
+
+            <div class="field">
+              <label for="last-name">Last name</label>
+              <input
+                id="last-name"
+                name="lastName"
+                type="text"
+                autocomplete="family-name"
+                required
+                minlength="2"
+                pattern="[^0-9]*"
+                aria-describedby="last-name-error"
+              />
+              <span class="field-error" id="last-name-error"></span>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field address-field">
+              <label for="address">Address <span>(optional)</span></label>
+              <input
+                id="address"
+                name="address"
+                type="text"
+                autocomplete="address-line1"
+                aria-describedby="address-error"
+              />
+              <span class="field-error" id="address-error"></span>
+            </div>
+
+            <div class="field house-number-field">
+              <label for="house-number">No. <span>(optional)</span></label>
+              <input
+                id="house-number"
+                name="houseNumber"
+                type="text"
+                autocomplete="address-line2"
+                aria-describedby="house-number-error"
+              />
+              <span class="field-error" id="house-number-error"></span>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="zip-code">Zip code</label>
+              <input
+                id="zip-code"
+                name="zipCode"
+                type="text"
+                autocomplete="postal-code"
+                required
+                aria-describedby="zip-code-error"
+              />
+              <span class="field-error" id="zip-code-error"></span>
+            </div>
+
+            <div class="field">
+              <label for="city">City</label>
+              <input
+                id="city"
+                name="city"
+                type="text"
+                autocomplete="address-level2"
+                required
+                pattern="[^0-9]*"
+                aria-describedby="city-error"
+              />
+              <span class="field-error" id="city-error"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="country">Country</label>
+            <select
+              id="country"
+              name="country"
+              required
+              aria-describedby="country-error"
+            >
+              <option value="">Select a country</option>
+              <option>Australia</option>
+              <option>Austria</option>
+              <option>Bangladesh</option>
+              <option>Belgium</option>
+              <option>Brazil</option>
+              <option>Canada</option>
+              <option>Chile</option>
+              <option>China</option>
+              <option>Colombia</option>
+              <option>Czech Republic</option>
+              <option>Denmark</option>
+              <option>Egypt</option>
+              <option>Finland</option>
+              <option>France</option>
+              <option>Germany</option>
+              <option>Greece</option>
+              <option>Hong Kong</option>
+              <option>Hungary</option>
+              <option>India</option>
+              <option>Indonesia</option>
+              <option>Ireland</option>
+              <option>Israel</option>
+              <option>Italy</option>
+              <option>Japan</option>
+              <option>Malaysia</option>
+              <option>Mexico</option>
+              <option>Netherlands</option>
+              <option>New Zealand</option>
+              <option>Nigeria</option>
+              <option>Norway</option>
+              <option>Pakistan</option>
+              <option>Philippines</option>
+              <option>Poland</option>
+              <option>Portugal</option>
+              <option>Romania</option>
+              <option>Saudi Arabia</option>
+              <option>Singapore</option>
+              <option>South Africa</option>
+              <option>South Korea</option>
+              <option>Spain</option>
+              <option>Sweden</option>
+              <option>Switzerland</option>
+              <option>Taiwan</option>
+              <option>Thailand</option>
+              <option>Türkiye</option>
+              <option>United Arab Emirates</option>
+              <option>United Kingdom</option>
+              <option>United States</option>
+              <option>Vietnam</option>
+            </select>
+            <span class="field-error" id="country-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              aria-describedby="email-error"
+            />
+            <span class="field-error" id="email-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              inputmode="tel"
+              autocomplete="tel"
+              value="0041"
+              required
+              pattern="[0-9()+ -]{6,20}"
+              aria-describedby="phone-error phone-hint"
+            />
+            <span class="field-hint" id="phone-hint"
+              >Country code is prefilled as 0041; you can change it.</span
+            >
+            <span class="field-error" id="phone-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="username">Username</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              autocomplete="username"
+              required
+              minlength="3"
+              pattern="[A-Za-z0-9._-]+"
+              aria-describedby="username-error username-status"
+            />
+            <span class="field-status" id="username-status"></span>
+            <span class="field-error" id="username-error"></span>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="password">Password</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="new-password"
+                required
+                minlength="8"
+                aria-describedby="password-error password-hint"
+              />
+              <span class="field-hint" id="password-hint"
+                >8+ characters, 1 capital letter, 1 special character</span
+              >
+              <span class="field-error" id="password-error"></span>
+            </div>
+
+            <div class="field">
+              <label for="confirm-password">Confirm password</label>
+              <input
+                id="confirm-password"
+                name="confirmPassword"
+                type="password"
+                autocomplete="new-password"
+                required
+                aria-describedby="confirm-password-error"
+              />
+              <span class="field-error" id="confirm-password-error"></span>
+            </div>
+          </div>
+
+          <button type="submit">Create account</button>
+          <p id="form-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <div id="high-five" class="high-five" role="alert" aria-hidden="true">
+          <span aria-hidden="true">🙌</span>
+          <strong>High five!</strong>
+          <p>Your account details are ready.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

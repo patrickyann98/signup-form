@@ -1,0 +1,230 @@
+:root {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: #182230;
+  background: #eef3f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.signup-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.signup-card {
+  width: min(100%, 720px);
+  padding: 32px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 16px 50px rgb(34 51 84 / 12%);
+}
+
+h1 {
+  margin: 0 0 8px;
+}
+
+.signup-card > p {
+  margin: 0 0 24px;
+  color: #667085;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  align-content: start;
+  gap: 7px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.address-field {
+  grid-column: span 1;
+}
+
+.house-number-field {
+  max-width: 160px;
+}
+
+label {
+  font-weight: 700;
+}
+
+label span {
+  color: #667085;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 8px;
+  font: inherit;
+}
+
+input,
+select {
+  border: 1px solid #cfd6e1;
+  background: #ffffff;
+  padding: 10px 12px;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    background-color 150ms ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 3px rgb(66 133 244 / 18%);
+}
+
+input:user-valid,
+select:user-valid {
+  border-color: #12b76a;
+  background: #f8fffb;
+}
+
+input:user-invalid,
+select:user-invalid,
+input.is-invalid,
+select.is-invalid {
+  border: 2px solid #d92d20;
+  background: #fff8f7;
+  box-shadow: 0 0 0 3px rgb(217 45 32 / 8%);
+}
+
+.field-error,
+.field-status,
+.field-hint {
+  min-height: 18px;
+  font-size: 0.82rem;
+}
+
+.field-error {
+  color: #b42318;
+}
+
+.field-hint {
+  color: #667085;
+}
+
+.field-status.available {
+  color: #067647;
+}
+
+.field-status.taken {
+  color: #b42318;
+}
+
+button {
+  margin-top: 14px;
+  border: 0;
+  background: #2563eb;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:focus-visible {
+  outline: 3px solid rgb(37 99 235 / 28%);
+  outline-offset: 3px;
+}
+
+#form-message {
+  min-height: 20px;
+  margin: 8px 0 0;
+  font-weight: 700;
+}
+
+.error {
+  color: #b42318;
+}
+
+.success {
+  color: #067647;
+}
+
+.high-five {
+  display: none;
+  margin-top: 20px;
+  padding: 18px;
+  border: 1px solid #abefc6;
+  border-radius: 12px;
+  background: #ecfdf3;
+  text-align: center;
+  color: #067647;
+}
+
+.high-five.show {
+  display: block;
+  animation: celebrate 500ms ease-out;
+}
+
+.high-five span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 3rem;
+}
+
+.high-five p {
+  margin: 5px 0 0;
+}
+
+@keyframes celebrate {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .signup-page {
+    padding: 12px;
+  }
+
+  .signup-card {
+    padding: 22px 18px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .house-number-field {
+    max-width: none;
+  }
+}
